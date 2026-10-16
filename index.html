@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="YL Studio offers thoughtfully designed clothing and accessories for a modern everyday wardrobe."
+    />
+    <title>YL Studio — Everyday, Considered</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="announcement">Complimentary shipping on orders over $100.</div>
+    <header class="header">
+      <button
+        class="icon menu-toggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      <a class="logo" href="#top">YL Studio</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#new-arrivals">New Arrivals</a><a href="#clothing">Clothing</a
+        ><a href="#accessories">Accessories</a
+        ><a href="#campaign">Collections</a>
+      </nav>
+      <div class="actions">
+        <button
+          class="icon search-toggle"
+          aria-label="Open search"
+          aria-expanded="false"
+        >
+          ⌕</button
+        ><button
+          class="icon cart-toggle"
+          aria-label="Open shopping bag"
+          aria-expanded="false"
+        >
+          ♧ <span class="count">0</span>
+        </button>
+      </div>
+    </header>
+    <div class="backdrop nav-backdrop" hidden></div>
+    <section class="search-panel" hidden>
+      <form id="search-form">
+        <label class="sr-only" for="search">Search products</label
+        ><input
+          id="search"
+          type="search"
+          placeholder="Search the collection"
+        /><button class="text-button">Search</button
+        ><button
+          class="icon close-search"
+          type="button"
+          aria-label="Close search"
+        >
+          ×
+        </button>
+      </form>
+      <p>Search by product name or category.</p>
+    </section>
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <p class="eyebrow light">The Spring / Summer Collection</p>
+          <h1>Everyday,<br />Considered.</h1>
+          <p class="hero-copy">
+            Discover thoughtfully designed essentials made to move with you.
+          </p>
+          <div class="hero-buttons">
+            <a class="button light-button" href="#new-arrivals"
+              >Shop New Arrivals</a
+            ><a class="button outline-button" href="#campaign"
+              >Explore the Collection</a
+            >
+          </div>
+        </div>
+        <span class="hero-index">YL / 01</span>
+      </section>
+      <section class="section categories">
+        <div class="section-title">
+          <p class="eyebrow">Curated for you</p>
+          <h2>Shop by Category</h2>
+        </div>
+        <div class="category-grid">
+          <a
+            class="category card-tall"
+            id="clothing"
+            href="#new-arrivals"
+            data-filter="Clothing"
+            ><img
+              src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=1000&q=85"
+              alt="Neutral-toned contemporary clothing"
+              loading="lazy"
+            /><span class="shade"></span><span class="number">01</span
+            ><span class="category-info"
+              ><strong>Clothing</strong><small>Explore category →</small></span
+            ></a
+          >
+          <a
+            class="category card-short"
+            id="accessories"
+            href="#new-arrivals"
+            data-filter="Accessories"
+            ><img
+              src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=900&q=85"
+              alt="Structured leather tote bag"
+              loading="lazy"
+            /><span class="shade"></span><span class="number">02</span
+            ><span class="category-info"
+              ><strong>Accessories</strong
+              ><small>Explore category →</small></span
+            ></a
+          >
+          <a
+            class="category card-tall"
+            href="#new-arrivals"
+            data-filter="Clothing"
+            ><img
+              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85"
+              alt="Everyday fashion styling"
+              loading="lazy"
+            /><span class="shade"></span><span class="number">03</span
+            ><span class="category-info"
+              ><strong>Everyday Essentials</strong
+              ><small>Explore category →</small></span
+            ></a
+          >
+        </div>
+      </section>
+      <section class="section arrivals" id="new-arrivals">
+        <div class="section-title title-row">
+          <div>
+            <p class="eyebrow">Just in</p>
+            <h2>New Arrivals</h2>
+          </div>
+          <a class="inline-link" href="#products">View all new arrivals →</a>
+        </div>
+        <div class="toolbar">
+          <p id="result-count" aria-live="polite">Showing 4 products</p>
+          <label
+            >Sort by
+            <select id="sort">
+              <option value="featured">Featured</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+              <option value="name">Name: A to Z</option>
+            </select></label
+          >
+        </div>
+        <div class="products" id="products">
+          <article
+            class="product"
+            data-name="Essential Cotton Shirt"
+            data-category="Clothing"
+            data-price="68"
+            data-id="shirt"
+          >
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=800&q=85"
+                alt="Cream cotton shirt"
+                loading="lazy"
+              /><span class="badge">New</span
+              ><button class="quick-add" data-add="shirt">
+                Add to bag <span>＋</span>
+              </button>
+            </div>
+            <div class="product-meta">
+              <h3>Essential Cotton Shirt</h3>
+              <span>$68</span>
+            </div>
+            <p class="variant">Natural / Sky</p>
+            <div class="swatches">
+              <button
+                class="swatch sand selected"
+                aria-label="Natural colour selected"
+                aria-pressed="true"
+              ></button
+              ><button
+                class="swatch black"
+                aria-label="Black colour"
+                aria-pressed="false"
+              ></button>
+            </div>
+          </article>
+          <article
+            class="product"
+            data-name="Everyday Tailored Trousers"
+            data-category="Clothing"
+            data-price="95"
+            data-id="trousers"
+          >
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1506629905607-d9a4e4c4b6c4?auto=format&fit=crop&w=800&q=85"
+                alt="Tailored trousers"
+                loading="lazy"
+              /><span class="badge">New</span
+              ><button class="quick-add" data-add="trousers">
+                Add to bag <span>＋</span>
+              </button>
+            </div>
+            <div class="product-meta">
+              <h3>Everyday Tailored Trousers</h3>
+              <span>$95</span>
+            </div>
+            <p class="variant">Taupe / Black</p>
+            <div class="swatches">
+              <button
+                class="swatch taupe selected"
+                aria-label="Taupe colour selected"
+                aria-pressed="true"
+              ></button
+              ><button
+                class="swatch black"
+                aria-label="Black colour"
+                aria-pressed="false"
+              ></button>
+            </div>
+          </article>
+          <article
+            class="product"
+            data-name="Minimal Leather Tote"
+            data-category="Accessories"
+            data-price="120"
+            data-id="tote"
+          >
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=85"
+                alt="Minimal brown leather tote"
+                loading="lazy"
+              /><button class="quick-add" data-add="tote">
+                Add to bag <span>＋</span>
+              </button>
+            </div>
+            <div class="product-meta">
+              <h3>Minimal Leather Tote</h3>
+              <span>$120</span>
+            </div>
+            <p class="variant">Cognac / Black</p>
+            <div class="swatches">
+              <button
+                class="swatch cognac selected"
+                aria-label="Cognac colour selected"
+                aria-pressed="true"
+              ></button
+              ><button
+                class="swatch black"
+                aria-label="Black colour"
+                aria-pressed="false"
+              ></button>
+            </div>
+          </article>
+          <article
+            class="product"
+            data-name="Classic Knit Sweater"
+            data-category="Clothing"
+            data-price="88"
+            data-id="sweater"
+          >
+            <div class="product-image">
+              <img
+                src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=85"
+                alt="Soft neutral knit sweater"
+                loading="lazy"
+              /><button class="quick-add" data-add="sweater">
+                Add to bag <span>＋</span>
+              </button>
+            </div>
+            <div class="product-meta">
+              <h3>Classic Knit Sweater</h3>
+              <span>$88</span>
+            </div>
+            <p class="variant">Grey / Oat</p>
+            <div class="swatches">
+              <button
+                class="swatch grey selected"
+                aria-label="Grey colour selected"
+                aria-pressed="true"
+              ></button
+              ><button
+                class="swatch black"
+                aria-label="Black colour"
+                aria-pressed="false"
+              ></button>
+            </div>
+          </article>
+        </div>
+        <p id="empty" hidden>
+          No products match your search. Try another term.
+        </p>
+      </section>
+      <section class="story">
+        <div class="story-image">
+          <img
+            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1400&q=85"
+            alt="Contemporary fashion editorial"
+            loading="lazy"
+          />
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow">Our point of view</p>
+          <h2>Less, but<br />Better.</h2>
+          <p>
+            We design with real wardrobes in mind: pieces with a clear purpose,
+            considered details and the versatility to be worn on repeat.
+          </p>
+          <p>
+            From fabric hand-feel to the final proportion, every choice is made
+            to bring ease, quality and quiet confidence to the everyday.
+          </p>
+          <a class="button dark-button" href="#footer">Discover Our Story</a>
+        </div>
+      </section>
+      <section class="campaign" id="campaign">
+        <img
+          src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1800&q=85"
+          alt=""
+          loading="lazy"
+        />
+        <div class="campaign-shade"></div>
+        <div class="campaign-copy">
+          <p class="eyebrow light">Campaign 02 / 25</p>
+          <h2>The New<br />Season Edit.</h2>
+          <p>
+            New shapes, softened tailoring and warm neutrals for the change in
+            pace.
+          </p>
+          <a class="button light-button" href="#new-arrivals"
+            >Explore the Edit</a
+          >
+        </div>
+      </section>
+      <section class="trust section">
+        <div>
+          <span aria-hidden="true">♧</span>
+          <div>
+            <h3>Carefully Selected Materials</h3>
+            <p>Chosen for feel, performance and everyday wear.</p>
+          </div>
+        </div>
+        <div>
+          <span aria-hidden="true">♙</span>
+          <div>
+            <h3>Secure Checkout</h3>
+            <p>Established payment protection for every purchase.</p>
+          </div>
+        </div>
+        <div>
+          <span aria-hidden="true">↶</span>
+          <div>
+            <h3>Straightforward Returns</h3>
+            <p>Clear guidance and support if something isn't right.</p>
+          </div>
+        </div>
+      </section>
+      <section class="newsletter section">
+        <div>
+          <p class="eyebrow">Notes from the studio</p>
+          <h2>A Better Inbox.</h2>
+          <p>
+            Get collection updates, new arrivals and occasional notes from YL
+            Studio.
+          </p>
+        </div>
+        <form id="newsletter">
+          <label for="email">Email address</label>
+          <div class="email-row">
+            <input
+              id="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+              aria-describedby="email-help email-message"
+            /><button class="button dark-button">Subscribe</button>
+          </div>
+          <p id="email-help" class="fine">
+            No clutter. Unsubscribe whenever you like. This preview does not
+            submit data.
+          </p>
+          <p
+            id="email-message"
+            class="message"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="logo footer-logo" href="#top">YL Studio</a>
+          <p>
+            Considered clothing and accessories for a modern, everyday wardrobe.
+          </p>
+          <a href="mailto:hello@ylstudio.example">hello@ylstudio.example</a>
+        </div>
+        <div>
+          <h2>Shop</h2>
+          <a href="#new-arrivals">New Arrivals</a
+          ><a href="#clothing">Clothing</a><a href="#accessories">Accessories</a
+          ><a href="#campaign">Collections</a>
+        </div>
+        <div>
+          <h2>Help</h2>
+          <a href="mailto:hello@ylstudio.example">Contact</a
+          ><a href="#footer">Delivery &amp; Returns</a
+          ><a href="#footer">Size Guide</a><a href="#footer">FAQ</a>
+        </div>
+        <div>
+          <h2>About</h2>
+          <a href="#footer">Our Story</a><a href="#campaign">Journal</a
+          ><a href="#footer">Materials</a><a href="#footer">Careers</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> YL Studio. All rights reserved.</p>
+        <div>
+          <a href="#footer">Privacy</a><a href="#footer">Terms</a
+          ><a href="#footer">Instagram</a><a href="#footer">Pinterest</a>
+        </div>
+      </div>
+    </footer>
+    <div class="backdrop drawer-backdrop" hidden></div>
+    <aside
+      class="cart-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cart-title"
+      hidden
+    >
+      <div class="drawer-head">
+        <h2 id="cart-title">Your Bag <small id="drawer-count">(0)</small></h2>
+        <button class="icon close-cart" aria-label="Close shopping bag">
+          ×
+        </button>
+      </div>
+      <div class="cart-items" id="cart-items">
+        <p class="cart-empty">Your bag is currently empty.</p>
+      </div>
+      <div class="cart-foot">
+        <div><span>Subtotal</span><strong id="subtotal">$0</strong></div>
+        <p>Shipping and taxes calculated at checkout.</p>
+        <button class="button dark-button checkout" disabled>
+          Continue to checkout
+        </button>
+        <p class="fine">Demo storefront — checkout is not connected.</p>
+      </div>
+    </aside>
+    <div class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>
